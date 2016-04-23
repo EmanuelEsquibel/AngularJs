@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="ToDoList">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.min.js" charset="utf-8"></script>
+    <script src="controller.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="ToDoController">
+    <input type="text" ng-model="newActividad">
+    <input type="button" ng-click="addActividad()">
+    <ul ng-repeat="item in items">
+      <li> Actividad:  {{ item }} </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+<!-- user-autocomplete la sacamos de directives.js -->
+<input type="text" name="name" user-autocomplete="repos" style="width: 100%;">
+<ul class="results" ng-repeat="repo in repos track by $index">
+  <li>{{ repo }}</li>
+</div>

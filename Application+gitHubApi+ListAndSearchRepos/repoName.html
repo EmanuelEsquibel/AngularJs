@@ -1,0 +1,20 @@
+Supositorio:
+<br>
+<ul>
+  <li>
+    <h3>
+      Nombre:
+      <span ng-hide="repo.name"> Cargando... </span>
+      <span ng-show="repo.length != 0">
+        {{ repo.name }}
+      </span>
+    </h3>
+    <li> Descripcion:
+      <span ng-hide="repo.description"> Cargando... </span>
+      <span ng-show="repo.length != 0">
+        {{ repo.description }}
+      </span>
+    </li>
+  </li>
+</ul>
+<a href="#/">Atras</a>

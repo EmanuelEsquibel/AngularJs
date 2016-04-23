@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="newApp">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <!-- Angular framework -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <!-- ngRoute dependency -->
+    <script src="https://code.angularjs.org/1.5.0/angular-route.min.js" charset="utf-8"></script>
+    <!-- Jquery librarie -->
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Jquery autocomplete plugin -->
+    <script src="autocomplete-jquery-ui.js" charset="utf-8"></script>
+    <!-- App + Ctrls + Directives -->
+    <script src="newApp.js" charset="utf-8"></script>
+    <script src="controllers.js" charset="utf-8"></script>
+    <script src="directives.js" charset="utf-8"></script>
+    <style media="screen">
+      .results{
+        background-color: gray;
+      }
+      #ui-id-1{
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#/holaMundo">Link</a>
+    <div ng-view></div>
+  </body>
+</html>

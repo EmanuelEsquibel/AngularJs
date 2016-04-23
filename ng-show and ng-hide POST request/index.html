@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- var app = angular.module("   MyFirstApp   "[]);
+- MODULO Este modulo puede requerir de otros -->
+<html ng-app="MyFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <!-- Incluyo el controlador controller  -->
+    <script src="controller.js" charset="utf-8"></script>
+    <style media="screen">
+      .animated{
+        opacity: 1;
+        transition: all 0.4s;
+      }
+      .animated.ng-hide{
+        opacity: 0;
+        display: block !important;
+      }
+      .load{
+        color: green;
+      }
+      .error{
+        color: red;
+      }
+    </style>
+  </head>
+  <body ng-controller="FirstController">
+    {{ newPost }}
+    <!-- Add Post -->
+    <input type="text" ng-model="newPost.title">
+    <input type="text" ng-model="newPost.body">
+    <input type="text" ng-model="newPost.userId">
+    <input type="text" ng-model="newPost.id">
+    <input type="button" ng-click="addPost()">
+    <!-- Span load -->
+    <!-- Este span se ocultara cuando la cantidad de posts sea diferente de 0 -->
+    <span ng-hide="posts.length != 0 || error == true" class="load"><h1>Cargando...</h1></span>
+    <!-- Span error -->
+    <span ng-show="error == true" class="error"><h1>¡Error!</h1></span>
+    <!-- Posts of url -->
+    <ul ng-show="posts.length != 0 && error != true" class="animated">
+      <li ng-repeat="post in posts">
+        <h4> {{ post.title }}:</h1>
+        <p>{{ post.body }}:</p>
+      </li>
+    </ul>
+  </body>
+</html>

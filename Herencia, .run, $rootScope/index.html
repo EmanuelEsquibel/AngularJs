@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- var app = angular.module("   MyFirstApp   "[]);
+- MODULO Este modulo puede requerir de otros -->
+<html ng-app="MyFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <!-- Incluyo el controlador controller  -->
+    <script src="controller.js" charset="utf-8"></script>
+    <style media="screen">
+      .animated{
+        opacity: 1;
+        transition: all 0.4s;
+      }
+      .animated.ng-hide{
+        opacity: 0;
+        display: block !important;
+      }
+      .load{
+        color: green;
+      }
+      .error{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-controller="FirstController">
+      <span class="error">{{ $parent.variable }}</span>
+      <div ng-controller="SecondController">
+        <span class="load">{{ $parent.$parent.variable }}</span>
+      </div>
+    </div>
+  </body>
+</html>

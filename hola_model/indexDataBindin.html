@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- var app = angular.module("   MyFirstApp   "[]);
+- MODULO Este modulo puede requerir de otros -->
+<html ng-app="MyFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="cdnAngular" charset="utf-8"></script>
+    <!-- Incluyo el controlador controller  -->
+    <script src="controller.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="FirstController">
+    <!-- ng-model -> Aqui indicamos  la variable nombre que esta contenida dentro del controlador, si escribimos dentro de este input, se pasara el valor al controlador y el controlador asigna el valor a la varible nombre que la tenemos dentro de los corchetes -->
+    <input type="button" name="name" value="" ng-model="nombre">
+    {{ "Hola" + nombre }}
+    <br>
+    <!-- Directiva ng-repeat para uso de loops  -->
+    <ul>
+      <li ng-repeat="comentario in comentarios">
+        {{ comentario.comment + " -> Username: " + comentario.username }}
+      </li>
+    </ul>
+    <input type="text" name="name" ng-model="nuevoComentario.comentario">
+    <input type="text" name="name" ng-model="nuevoComentario.username">
+    <input type="button" name="name" value="Agregar" ng-click="agregarComentario()">
+  </body>
+</html>

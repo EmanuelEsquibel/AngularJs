@@ -1,0 +1,21 @@
+
+
+// Iniciamos un array showTable que va a almacenar la tabla
+// que se quiera mostrar seleccionada desde el select.
+scope.showTable = [];
+scope.selectTable = function(){
+  scope.showTable = [];
+  // La tabla a mostrar va a ser igual a la tabla seleccionada a traves,
+  // del array que cargamos en la peticion. Cada vez que seleccionamos una tabla en el select
+  // se manda el valor del index seleccionado y se busca en el array de la peticion http.
+  scope.showTable = scope.allTables[ scope.selectedTable ].values;
+  // nameTableToShow va a contener el nombre de la tabla elejida.
+  scope.nameTableToShow = scope.allTables[ scope.selectedTable ].nameTable;
+}
+
+
+// // Guardamos los nombres de cada tabla en un array aparte. Opcional.
+// for (var i = 0; i < scope.allTables.length; i++) {
+//   // Nombres de las tablas.
+//   scope.namesTable.push( scope.allTables[i].nameTable );
+// }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Autocomplete</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <script src="https://code.angularjs.org/1.5.0/angular-route.js" charset="utf-8"></script>
+    <!-- Jquery librarie -->
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Jquery autocomplete plugin -->
+    <script src="autocomplete-jquery-ui.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="jquery-ui.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="flexboxgrid-6.3.0/css/flexboxgrid.min.css" media="screen" title="no title" charset="utf-8">
+    <!--  -->
+    <script src="testApplication.js" charset="utf-8"></script>
+    <script src="services.js" charset="utf-8"></script>
+    <script src="controllers.js" charset="utf-8"></script>
+    <script src="directives.js" charset="utf-8"></script>
+    <style media="screen">
+      body, html{
+        background-color: rgb(191, 188, 167);
+        padding: 0;
+        margin: 5px;
+        overflow-x: hidden;
+      }
+      .ui-autocomplete-input{
+        background-color: rgb(179, 169, 101);
+        width: 100%;
+        height: 50px;
+        border-style: solid;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 20px;
+      }
+      ul{
+        list-style: none;
+      }
+      a{
+        text-decoration: none;
+        color: white;
+        font-size: 120%;
+      }
+      .containerRepos{
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .containerRepos > div{
+        width: 70%;
+        margin: 0 auto;
+      }
+      #repo{
+        background-color: rgb(179, 169, 101);
+        width: 100%;
+        height: 50px;
+        border-style: solid;
+        border-radius: 5px;
+        margin: 0.5px;
+        float: left;
+        text-align: center;
+      }
+      /*.ui-autocomplete{
+        background-color: limegreen;
+      }*/
+    </style>
+  </head>
+  <body ng-app="testApplication">
+    <div ng-view></div>
+  </body>
+</html>

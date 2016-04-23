@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="ToDoList">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <script src="angular-local-storage.min.js" charset="utf-8"></script>
+    <script src="controller.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="ToDoController">
+    <!-- ng-cloack lo que hace es, ocultar los elementos que contengan esta
+    etiqueta y a su vez sus hijos hasta que las doble llaves terminen de compilar
+    el codigo javascript que contengan  IMPONRTANTE ejecutar las etiquetas javascript
+    arriba de este atributo-->
+    <div class="container" ng-cloak>
+      <!-- Forma incorrecta de insertar url a una img a partir de angular  -->
+      <img src="{{ image_src }}" alt="" />
+      <!-- Para esto usaremos la directiva ng-src, de esta forma no habra errores -->
+      <img ng-src="{{ image_src }}" alt="" />
+      <!-- ng-class, si la condicion que le pasamos a esta etiqueta se cumple,
+      esta se aplicara -->
+      <img ng-src="{{ image_src }}" ng-class="$variableToEvaluate ? 'class-if-true' : 'class-if-false'" />
+    </div>
+  </body>
+</html>

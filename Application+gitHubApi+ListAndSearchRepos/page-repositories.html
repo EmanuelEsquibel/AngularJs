@@ -1,0 +1,11 @@
+<input type="text" user-autocomplete="repos">
+<br>
+<h1>Repositories -> Github -> Twitter </h1>
+<div class="containerRepos">
+  <div class="">
+    <span ng-hide="repos.length > 0">Cargando...</span>
+    <div ng-repeat="repo in repos track by $index" id="repo">
+      <div><a href="#/index/repo/{{ repo }}"> {{ repo }} </a></div>
+    </div>
+  </div>
+</div>

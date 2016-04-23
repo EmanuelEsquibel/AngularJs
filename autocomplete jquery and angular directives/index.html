@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="newApp">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="autocomplete-jquery-ui.js" charset="utf-8"></script>
+    <script src="controller.js" charset="utf-8"></script>
+    <style media="screen">
+      .results{
+        background-color: gray;
+      }
+      #ui-id-1{
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body ng-controller="imgController">
+    <input type="text" name="name" user-autocomplete="repos" style="width: 100%;">
+    <ul class="results" ng-repeat="repo in repos">
+      <li>{{ repo }}</li>
+    </div>
+  </body>
+</html>
